@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, } from "@/components/ui/card";
 import { Button } from '@/components/ui/button';
-import { X, Share2, ArrowRight } from 'lucide-react';
+import { X, ArrowRight } from 'lucide-react';
 import InfoCardService from '@/components/InfoCardService';
 import { ICardTitleService } from '@/interfaces/types';
 
@@ -29,7 +29,7 @@ const CardServiceBluur: React.FC<ICardTitleService> = ({id ,title, icon, iconCla
         return () => {
             window.removeEventListener('resize', checkMobileScreen);
         }
-    }, [])
+    }, [id])
 
   return (
       <div className="w-[100%] h-[100vh] flex justify-center items-center min-h-[100%] py-[2rem]">

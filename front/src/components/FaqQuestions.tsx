@@ -65,7 +65,7 @@ const FaqSection = () => {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600">
-            Can't find the answer you're looking for?{" "}
+            Can&apos;t find the answer you&apos;re looking for?{" "}
             <a href="#contact" className="text-lokai-blue font-medium hover:underline">
               Contact our team
             </a>

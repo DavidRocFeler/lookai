@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bot, Shield, Clock, CheckCircle } from 'lucide-react';
+import { ArrowRight, Shield, Clock, CheckCircle } from 'lucide-react';
 import SphericalWave from './SphericalWave';
 
 const HeroSection = () => {
@@ -101,7 +101,7 @@ const HeroSection = () => {
                     </div>
                     <div className="bg-gray-100 rounded-lg p-3 max-w-[80%]">
                       <p className="text-sm text-gray-800">
-                      Hi, I'm Lookai! Your AI agent with the ability to understand human language, reason, automate, and run applications hosted on the internet through prior training. If you'd like, I can tell you more about Lookai, or if you need us to answer any questions you may have about our service, I'll also be happy to assist you with anything you need.
+                      Hi, I&apos;m Lookai! Your AI agent with the ability to understand human language, reason, automate, and run applications hosted on the internet through prior training. If you&apos;d like, I can tell you more about Lookai, or if you need us to answer any questions you may have about our service, I&apos;ll also be happy to assist you with anything you need.
                       </p>
                     </div>
                   </div>
@@ -128,7 +128,7 @@ const HeroSection = () => {
                   <div className="flex gap-3 mb-4 justify-end">
                     <div className="bg-lokai-blue rounded-lg p-3 max-w-[80%]">
                       <p className="text-sm text-white">
-                        Yes, I'm interested in improving my sales service
+                        Yes, I&apos;m interested in improving my sales service
                       </p>
                     </div>
                     <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
@@ -141,8 +141,8 @@ const HeroSection = () => {
                     </div>
                     <div className="bg-gray-100 rounded-lg p-3 max-w-[80%]">
                       <p className="text-sm text-gray-800">
-                      Our travel agency sales service uses artificial intelligence to completely transform your sales strategy. We develop a system that analyzes your customers' behavior, predicts their travel preferences, and creates personalized sales paths. We can automate lead follow-up, generate instant quotes, and create unique value propositions for each type of traveler, significantly increasing your closing rates and improving the customer experience.
-                      Would you like to learn more about how we can boost your travel agency's sales?
+                      Our travel agency sales service uses artificial intelligence to completely transform your sales strategy. We develop a system that analyzes your customers behavior, predicts their travel preferences, and creates personalized sales paths. We can automate lead follow-up, generate instant quotes, and create unique value propositions for each type of traveler, significantly increasing your closing rates and improving the customer experience.
+                      Would you like to learn more about how we can boost your travel agency&apos;s sales?
                       </p>
                     </div>
                   </div>

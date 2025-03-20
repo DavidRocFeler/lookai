@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { BadgeCheck, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 const TrustSection = () => {
   // Placeholder client logos (would be replaced with actual images in a real implementation)
@@ -74,7 +74,7 @@ const TrustSection = () => {
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-700 mb-6 italic">{testimonial.quote}</p>
                 <div>
                   <p className="font-semibold">{testimonial.author}</p>
                   <p className="text-sm text-gray-500">{testimonial.position}</p>

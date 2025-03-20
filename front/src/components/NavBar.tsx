@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 // import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
 // import { useIsMobile } from '@/hooks/use-mobile';
@@ -47,19 +48,19 @@ const Navbar = () => {
     >
       <div className="container px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold text-lokai-blue dark:text-lokai-blue-light"> 
+          <Link href="/" className="text-2xl font-bold text-lokai-blue dark:text-lokai-blue-light"> 
             <img className='w-[6.8rem] h-[1.55rem]' src="/LookaiLogo.png" alt="" />
-          </a>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className=" hover:text-lokai-blue dark:hover:text-lokai-blue-light transition-colors font-medium"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
           

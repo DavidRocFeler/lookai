@@ -17,7 +17,7 @@ export interface ICardTitleService {
     title: string; 
     icon: React.ReactNode,
     iconClassName: string;
-    onClose: () => void;
+    onClose?: () => void;
 }
 export interface IInforCardServiceProps {
     serviceID: number | null;
