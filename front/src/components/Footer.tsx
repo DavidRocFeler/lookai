@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col mb-8">
           <div className="space-y-10 ">
-            <a className="text-xl font-bold text-white tracking-[5px] "> <img className='w-[6.8rem] h-[1.55rem]' src="/LOOKAILOGO.png" alt="" /></a>
+            <a className="text-xl font-bold text-white tracking-[5px] "> <img className='w-[6.8rem] h-[1.55rem]' src="/LookaiLogo.png" alt="LookaiLogo" /></a>
             <p className="text-sm w-[50%] tracking-[5px] m-auto">
               Transforming customer service through artificial intelligence. We help businesses automate, optimize, and scale their operations.  &copy; {new Date().getFullYear()}  LOOKAI AI Technologies. All rights reserved.
             </p>

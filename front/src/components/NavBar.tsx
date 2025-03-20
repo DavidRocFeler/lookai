@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="container px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-lokai-blue dark:text-lokai-blue-light"> 
-            <img className='w-[6.8rem] h-[1.55rem]' src="/LookaiLogo.png" alt="" />
+            <img className='w-[6.8rem] h-[1.55rem]' src="/LookaiLogo.png" alt="LookaiLogo" />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-6">
