@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, } from "@/components/ui/card";
 import { Button } from './ui/button';
 import { CheckCircle, Calendar, MessagesSquare, Users, Share2, ArrowRight } from 'lucide-react';
@@ -18,6 +18,24 @@ const ModulesSection = () => {
   const onCLickCloseModal = () => {
     setOpenModalService(false);
   }
+
+  useEffect(() => {
+    if (openModalService) {
+      // Deshabilitar scroll
+      document.body.style.overflow = 'hidden';
+      
+      // Posicionar en la parte superior
+      window.scrollTo(0, 0);
+    } else {
+      // Restaurar scroll cuando se cierra el modal
+      document.body.style.overflow = 'unset';
+    }
+
+    // Limpiar efecto al desmontar
+    return () => {
+      document.body.style.overflow = 'unset';
+    }
+  }, [openModalService]);
 
   const modules = [
     {
