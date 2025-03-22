@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import {
   AccordionRoot,
   AccordionContent,
@@ -7,6 +8,8 @@ import {
 } from "@/components/ui/accordion"
 
 const FaqSection = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const faqs = [
     {
       question: "How does it really work?",
@@ -49,13 +52,35 @@ const FaqSection = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <AccordionRoot type="single" collapsible className="w-full">
+          <AccordionRoot 
+            type="single" 
+            collapsible 
+            className="w-full"
+            onValueChange={(value) => {
+              const index = value ? parseInt(value.split('-')[1]) : null;
+              setOpenIndex(index);
+            }}
+          >
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left font-medium text-lg py-4">
+              <AccordionItem key={index} value={`item-${index}`} className='border-b-[1px] border-gray-200'>
+                <AccordionTrigger className="text-left font-medium text-lg py-4 flex flex-row items-center w-full">
                   {faq.question}
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="24" height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    className={`ml-auto lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200 
+                    ${openIndex === index ? 'rotate-180' : ''}`}
+                  >
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600">
+                <AccordionContent className="text-gray-600 mb-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
