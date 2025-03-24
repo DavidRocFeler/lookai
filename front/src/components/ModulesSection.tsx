@@ -66,9 +66,9 @@ const ModulesSection = () => {
       description: "Convert prospects into customers more effectively",
       icon: <Share2 className="h-12 w-12 text-lokai-blue mb-4" />,
       features: [
-        "Lead qualification and prioritization",
-        "Prospect tracking and follow-up",
-        "Sales closure assistance"
+        "AI-Driven Content Creation",
+        "Personalized Marketing Strategies",
+        "Real-Time Performance Analytics"
       ],
     },
     {
