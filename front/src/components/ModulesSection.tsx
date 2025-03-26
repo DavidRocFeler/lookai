@@ -23,9 +23,7 @@ const ModulesSection = () => {
     if (openModalService) {
       // Deshabilitar scroll
       document.body.style.overflow = 'hidden';
-      
-      // Posicionar en la parte superior
-      window.scrollTo(0, 0);
+
     } else {
       // Restaurar scroll cuando se cierra el modal
       document.body.style.overflow = 'unset';

@@ -78,6 +78,7 @@ export default {
 				xscustom: '350px',
 				xsscustom: '400px',
 				scustom: '500px',
+				smcustom:'600px',
 				xlcustom: '900px',
 				xxlcustom: '1000px',
 				xllcustom: '1400px'

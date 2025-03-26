@@ -51,8 +51,8 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-semibold">Address</h3>
                   <p className="text-gray-600">
-                    Herengracht 182<br />
-                    1016 BR Amsterdam<br />
+                    Dellenweg 115<br />
+                    8161 PW Epe<br />
                     The Netherlands
                   </p>
                 </div>

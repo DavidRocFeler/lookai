@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+import Tiktok from './social/Tiktok';
+import X from './social/X';
 
 const Footer = () => {
   return (
@@ -10,17 +12,19 @@ const Footer = () => {
         <div className="flex flex-col mb-8">
           <div className="space-y-10 ">
             <a className="text-xl font-bold text-white tracking-[5px] "> <img className='w-[6.8rem] h-[1.55rem]' src="/LookaiLogo.png" alt="LookaiLogo" /></a>
-            <p className="text-sm w-[50%] tracking-[5px] m-auto">
+            <p className="text-sm w-full smcustom:w-[70%] xlcustom:w-[50%] tracking-[5px] m-auto">
               Transforming customer service through artificial intelligence. We help businesses automate, optimize, and scale their operations.  &copy; {new Date().getFullYear()}  LOOKAI AI Technologies. All rights reserved.
             </p>
-            <div className="text-sm w-[50%] mx-auto">
 
-            <div className="flex flex-col space-y-6 xlcustom:space-y-0 xlcustom:flex-row justify-between mb-4 text-sm">
-              <a href="#" className="hover:text-lokai-blue transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-lokai-blue transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-lokai-blue transition-colors">Cookie Policy</a>
+            <div className="text-sm w-full smcustom:w-[70%] xlcustom:w-[50%] mx-auto">
+
+              <div className="w-fit smcustom:w-full flex flex-col space-y-6 smcustom:space-y-0 smcustom:flex-row justify-between mb-4 text-sm">
+                <a href="#" className="hover:text-lokai-blue transition-colors w-fit">Privacy Policy</a>
+                <a href="#" className="hover:text-lokai-blue transition-colors w-fit">Terms of Service</a>
+                <a href="#" className="hover:text-lokai-blue transition-colors w-fit">Cookie Policy</a>
+              </div>
+
             </div>
-          </div>
  
           </div>
           
@@ -58,32 +62,36 @@ const Footer = () => {
             </div>
           </div> */}
         </div>
-        <figure>
-              <div className="flex justify-between w-fit space-x-8 mt-[3rem]">
+        <figure className='w-[11%]'>
+              {/* <div className="flex justify-between w-fit space-x-8 mt-[3rem]">
                 <img src="/TiktokLogo.svg" alt="" />
                 <img src="/XLogo.svg" alt="" />
                 <img src="/FacebookLogo.svg" alt="" />
                 <img src="/InstagramLogo.svg" alt="" />
-              </div>
+              </div> */}
 
-              {/* <div className="ml-auto w-fit flex space-x-6">
+              <div className="ml-auto w-fit flex space-x-6">
                 <a href="#" className="hover:text-lokai-blue transition-colors">
                   <Facebook className="h-5 w-5" />
                   <span className="sr-only">Facebook</span>
                 </a>
                 <a href="#" className="hover:text-lokai-blue transition-colors">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
+                  <Instagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
+                </a>
+                <a href="#" className="hover:text-lokai-blue transition-colors">
+                  <Tiktok className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
                 </a>
                 <a href="#" className="hover:text-lokai-blue transition-colors">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </a>
                 <a href="#" className="hover:text-lokai-blue transition-colors">
-                  <Instagram className="h-5 w-5" />
-                  <span className="sr-only">Instagram</span>
+                  <X className="h-5 w-5" />
+                  <span className="sr-only">Twitter</span>
                 </a>
-              </div> */}
+              </div>
               
           </figure>
 
