@@ -17,6 +17,11 @@ const CardServiceBluur: React.FC<ICardTitleService> = ({id ,title, icon, iconCla
     : icon;
 
     useEffect (() => {
+        if (serviceID !== null ) {
+          setTimeout(() => {
+            alert('Scroll to see more')
+          }, 100)
+        }
         const checkMobileScreen = () => {
             setIsMobileScreen(window.innerWidth < 500)
         };
@@ -29,7 +34,7 @@ const CardServiceBluur: React.FC<ICardTitleService> = ({id ,title, icon, iconCla
         return () => {
             window.removeEventListener('resize', checkMobileScreen);
         }
-    }, [id])
+    }, [id, serviceID])
 
   return (
       <div className="w-[100%] h-[100vh] flex justify-center items-center min-h-[100%] py-[2rem]">
