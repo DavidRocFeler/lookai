@@ -7,8 +7,9 @@ import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Loader2, Mail, Lock, Key } from 'lucide-react';
 
+ //loginWithPrivateKey
 const LoginForm: React.FC<{ onToggleRegister: () => void }> = ({ onToggleRegister }) => {
-  const { login, loginWithPrivateKey, isLoading } = useAuth();
+  const { login, isLoading } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [privateKey, setPrivateKey] = useState('');
@@ -18,10 +19,10 @@ const LoginForm: React.FC<{ onToggleRegister: () => void }> = ({ onToggleRegiste
     await login(email, password);
   };
 
-  const handlePrivateKeySubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await loginWithPrivateKey(privateKey);
-  };
+  // const handlePrivateKeySubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   await loginWithPrivateKey(privateKey);
+  // };
 
   return (
     <div className="space-y-6 p-6 w-full max-w-md">
@@ -86,7 +87,8 @@ const LoginForm: React.FC<{ onToggleRegister: () => void }> = ({ onToggleRegiste
         </TabsContent>
 
         <TabsContent value="privateKey">
-          <form onSubmit={handlePrivateKeySubmit} className="space-y-4">
+        {/* onSubmit={handlePrivateKeySubmit} linea 91 */}
+          <form className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="privateKey">Private Key</Label>
               <div className="relative">
@@ -122,7 +124,7 @@ const LoginForm: React.FC<{ onToggleRegister: () => void }> = ({ onToggleRegiste
 
       <div className="text-center">
         <p className="text-sm text-muted-foreground">
-          Don't have a wallet?{' '}
+          Don&apos;t have a wallet?{' '}
           <button
             type="button"
             onClick={onToggleRegister}

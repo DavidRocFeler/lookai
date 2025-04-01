@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, } from "@/co
 import { Button } from './ui/button';
 import { CheckCircle, Calendar, MessagesSquare, Users, Share2, ArrowRight } from 'lucide-react';
 import CardServiceBluur from './CardServiceBluur';
-import { servicesAreasHelpers } from '@/helpers/servicesAreas.helpers';
 
 const ModulesSection = () => {
   const [ openModalService, setOpenModalService ] = useState(false);

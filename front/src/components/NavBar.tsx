@@ -4,10 +4,10 @@ import Link from 'next/link';
 // import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
 // import { useIsMobile } from '@/hooks/use-mobile';
-import ThemeToggle from './ThemeToggle';
+// import ThemeToggle from './ThemeToggle';
 import { Button } from './ui/button';
 import { useRouter } from 'next/navigation';
-import { Wallet } from 'lucide-react';
+// import { Wallet } from 'lucide-react';
 import WebToken from './WebToken';
 
 const Navbar = () => {

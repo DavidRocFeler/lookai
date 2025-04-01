@@ -4,9 +4,9 @@ import { Star } from 'lucide-react';
 
 const TrustSection = () => {
   // Placeholder client logos (would be replaced with actual images in a real implementation)
-  const clientLogos = [
-    "Company A", "Company B", "Company C", "Company D", "Company E", "Company F"
-  ];
+  // const clientLogos = [
+  //   "Company A", "Company B", "Company C", "Company D", "Company E", "Company F"
+  // ];
 
   const testimonials = [
     {

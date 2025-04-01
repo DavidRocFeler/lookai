@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+import { Facebook, Linkedin, Instagram } from 'lucide-react';
 import Tiktok from './social/Tiktok';
 import X from './social/X';
 

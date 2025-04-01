@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { LogOut, Copy, Coins } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import WebToken from '../WebToken';
+import RobotAutomate from '../RobotAutomate';
+import Link from 'next/link';
 
 const WalletHeader: React.FC = () => {
   const { user, wallet, logout } = useAuth();
@@ -31,11 +33,11 @@ const WalletHeader: React.FC = () => {
     <div className="rounded-lg shadow-md p-6 wallet-shadow bg-[#414244] border-[#535456] border-solid border-[1px]">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-agent-primary text-white">Agent Lookai Wallet</h1>
-          <p className="text-[#a6abb5]">Welcome, {user.username}</p>
+            <h1 className="text-2xl font-bold text-agent-primary text-white">Wallet Lookai</h1>
+          <p className="text-[#a6abb5]">Welcome to wallet, {user.username}</p>
         </div>
         
-        <div className="flex items-center space-x-2 text-[#a6abb5]">
+        <div className="flex items-center space-x-3 text-[#a6abb5]">
           {wallet.lookai && (
             <div className="flex items-center bg-agent-light bg-opacity-20 px-3 py-1 rounded-md mr-2">
               <WebToken className='h-5 w-5 mr-2'/>
@@ -62,6 +64,15 @@ const WalletHeader: React.FC = () => {
           >
             <Copy className="h-4 w-4 text-lokai-blue-dark hover:text-lokai-blue" />
           </Button>
+        </div>
+        <div className='flex flex-row items-center mt-4'>
+          <Link
+          className='text-lokai-blue-dark hover:text-lokai-blue mr-3 text-[0.9rem]'
+          href='/'
+          >
+            Go to agent lookai
+          </Link>
+          <RobotAutomate className='cursor-pointer w-5 h-5 text-lokai-blue-dark hover:text-lokai-blue ml-auto mr-2'/>
         </div>
       </div>
     </div>
