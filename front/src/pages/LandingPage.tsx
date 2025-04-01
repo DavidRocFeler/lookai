@@ -50,7 +50,7 @@ const LandingPage = () => {
         <ModulesSection />
         {/* <CaseStudiesSection /> */}
         <ProcessSection />
-        <TrustSection />
+        <TrustSection />      
         <FaqSection />
         <ContactSection />
       </main>
