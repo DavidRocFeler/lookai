@@ -9,10 +9,12 @@ import { useToast } from '@/components/ui/use-toast';
 import WebToken from '../WebToken';
 import RobotAutomate from '../RobotAutomate';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const WalletHeader: React.FC = () => {
   const { user, wallet, logout } = useAuth();
   const { toast } = useToast();
+  const router = useRouter()
 
   if (!user || !wallet) return null;
 
@@ -45,7 +47,9 @@ const WalletHeader: React.FC = () => {
             </div>
           )}
           <Button className='bg-transparent hover:bg-transparent hover:border-lokai-blue-light border-lokai-blue border-solid border-[1px] text-lokai-blue-dark hover:text-lokai-blue' onClick={logout}>
-            <LogOut className="h-4 w-4 mr-2 text-lokai-blue" />
+            <LogOut 
+            onClick={logout}
+            className="h-4 w-4 mr-2 text-lokai-blue" />
             Logout
           </Button>
         </div>

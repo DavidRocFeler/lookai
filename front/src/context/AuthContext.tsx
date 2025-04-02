@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { User, Wallet } from '@/interfaces/types';
 import { generateKeys, generateWallet } from '@/lib/crypto';
 import { useToast } from '@/components/ui/use-toast';
+import { useRouter } from 'next/navigation';
 
 interface AuthContextType {
   user: User | null;
@@ -22,6 +23,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
+  const router = useRouter()
 
   useEffect(() => {
     const savedUser = localStorage.getItem('agent_user');
@@ -164,14 +166,33 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const logout = () => {
+    // Elimina todos los items de localStorage relacionados con la autenticación
+    localStorage.removeItem('agent_user');
+    localStorage.removeItem('agent_wallet');
+    
+    // Elimina todos los passwords almacenados (usando el prefijo)
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('agent_password_')) {
+        localStorage.removeItem(key);
+      }
+    });
+  
+    // Elimina cualquier otro dato relacionado (opcional)
+    localStorage.removeItem('agent_transactions');
+    localStorage.removeItem('agent_settings');
+  
+    // Limpia el estado
     setUser(null);
     setWallet(null);
+  
+    // Muestra notificación
     toast({
       title: "Logged out",
       description: "You have been successfully logged out",
     });
+    router.push('/auth');
   };
-
+  
   const updateWallet = (newWallet: Wallet) => {
     setWallet(newWallet);
     if (user) {

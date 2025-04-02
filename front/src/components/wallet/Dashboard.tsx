@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => {
   if (!wallet) return null;
 
   return (
-    <div className='bg-[#2e2e2e] w-full h-min-[100%]'>
+    <div className='bg-[#2e2e2e] w-full'>
       <SphericalWaveBigger/>
       <div className="container mx-auto p-4 max-w-5xl ">
         <WalletHeader />
